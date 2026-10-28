@@ -20,7 +20,7 @@ int find(int x) {
 
 bool unite(int a, int b) {
     a = find(a);
-    b = find(a);
+    b = find(b);
     if (a == b) return  false;
     if (sz[a] < sz[b]) swap(a, b);
     parent[b] = a;
