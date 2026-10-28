@@ -6,7 +6,7 @@ using namespace std;
 
 struct Edge {
     int d2, u, v;
-    bool operator<(const Edge& o) const { return d2 < o.d2; }
+    bool operator<(const Edge &o) const { return d2 < o.d2; }
 };
 int parent[1005], sz[1005];
 
@@ -30,7 +30,7 @@ bool unite(int a, int b) {
 
 int main() {
     int T;
-        scanf_s("%d", &T);
+    scanf_s("%d", &T);
     for (int caso = 1; caso <= T; caso++) {
         int n, r;
         scanf_s("%d %d", &n, &r);
@@ -43,7 +43,7 @@ int main() {
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 int dx = x[i] - x[j], dy = y[i] - y[j];
-                Edges.push_back({ dx * dx + dy * dy, i, j });
+                Edges.push_back({dx * dx + dy * dy, i, j });
             }
         }
         sort(Edges.begin(), Edges.end());
